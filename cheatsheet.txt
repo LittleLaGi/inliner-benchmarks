@@ -1,5 +1,8 @@
+[Attribute]
+__attribute__((always_inline))
+
 [Compilation]
-clang -O3 -Rpass=inline <source>
+clang -O3 -Rpass=inline -o no-inline.out <source>
 
 [Switch user]
 sudo -i

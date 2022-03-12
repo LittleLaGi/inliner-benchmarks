@@ -1,0 +1,111 @@
+linpack-pc.c:670:29: remark: idamax inlined into dgefa with (cost=25, threshold=250) [-Rpass=inline]
+                        l = idamax(n-k,&a[lda*k+k],1) + k;
+                            ^
+linpack-pc.c:699:41: remark: daxpy inlined into dgefa with (cost=0, threshold=250) [-Rpass=inline]
+                                        daxpy(n-(k+1),t,&a[lda*k+k+1],1,
+                                        ^
+linpack-pc.c:689:33: remark: dscal inlined into dgefa with (cost=-10, threshold=250) [-Rpass=inline]
+                                dscal(n-(k+1),t,&a[lda*k+k+1],1);
+                                ^
+linpack-pc.c:796:33: remark: daxpy inlined into dgesl with (cost=0, threshold=250) [-Rpass=inline]
+                                daxpy(n-(k+1),t,&a[lda*k+k+1],1,&b[k+1],1 );
+                                ^
+linpack-pc.c:824:47: remark: ddot inlined into dgesl with (cost=-10, threshold=250) [-Rpass=inline]
+                                b[k] = b[k] + ddot(n-(k+1),&a[lda*k+k+1],1,&b[k+1],1);
+                                              ^
+linpack-pc.c:815:29: remark: ddot inlined into dgesl with (cost=-10, threshold=250) [-Rpass=inline]
+                        t = ddot(k,&a[lda*k+0],1,&b[0],1);
+                            ^
+linpack-pc.c:806:21: remark: daxpy inlined into dgesl with (cost=0, threshold=250) [-Rpass=inline]
+                    daxpy(k,t,&a[lda*k+0],1,&b[0],1 );
+                    ^
+linpack-pc.c:296:9: remark: matgen inlined into main with (cost=125, threshold=250) [-Rpass=inline]
+        matgen(a,lda,n,b,&norma);
+        ^
+linpack-pc.c:530:28: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            atime[1][j] = (second() - t1)/ntimes;
+                           ^
+linpack-pc.c:297:14: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+        t1 = second();
+             ^
+linpack-pc.c:299:23: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+        atime[0][0] = second() - t1;
+                      ^
+linpack-pc.c:300:14: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+        t1 = second();
+             ^
+linpack-pc.c:301:9: remark: dgesl inlined into main with (cost=245, threshold=250) [-Rpass=inline]
+        dgesl(a,lda,n,ipvt,b,0);
+        ^
+linpack-pc.c:527:17: remark: dgesl inlined into main with (cost=245, threshold=250) [-Rpass=inline]
+                dgesl(aa,ldaa,n,ipvt,b,0);
+                ^
+linpack-pc.c:523:18: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            t1 = second();      
+                 ^
+linpack-pc.c:302:23: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+        atime[1][0] = second() - t1;
+                      ^
+linpack-pc.c:310:9: remark: matgen inlined into main with (cost=125, threshold=250) [-Rpass=inline]
+        matgen(a,lda,n,b,&norma);
+        ^
+linpack-pc.c:521:28: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            atime[0][j] = (second() - t1 - tm2)/ntimes;
+                           ^
+linpack-pc.c:314:9: remark: dmxpy inlined into main with (cost=always): always inline attribute [-Rpass=inline]
+        dmxpy(n,b,n,lda,x,a);
+        ^
+linpack-pc.c:323:15: remark: epslon inlined into main with (cost=-35, threshold=375) [-Rpass=inline]
+        eps = epslon(ONE);
+              ^
+linpack-pc.c:517:17: remark: matgen inlined into main with (cost=125, threshold=250) [-Rpass=inline]
+                matgen(aa,ldaa,n,b,&norma);
+                ^
+linpack-pc.c:513:18: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            t1 = second();
+                 ^
+linpack-pc.c:494:17: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+        time2 = second();
+                ^
+linpack-pc.c:364:21: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            time1 = second();
+                    ^
+linpack-pc.c:368:18: remark: matgen inlined into main with (cost=125, threshold=250) [-Rpass=inline]
+                 matgen(a,lda,n,b,&norma);
+                 ^
+linpack-pc.c:492:13: remark: matgen inlined into main with (cost=125, threshold=250) [-Rpass=inline]
+            matgen(aa,ldaa,n,b,&norma);    
+            ^
+linpack-pc.c:489:17: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+        time1 = second();        
+                ^
+linpack-pc.c:370:21: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            time2 = second();
+                    ^
+linpack-pc.c:404:21: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            time1 = second();
+                    ^
+linpack-pc.c:408:17: remark: matgen inlined into main with (cost=125, threshold=250) [-Rpass=inline]
+                matgen(a,lda,n,b,&norma);
+                ^
+linpack-pc.c:470:28: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            atime[1][j] = (second() - t1)/ntimes;
+                           ^
+linpack-pc.c:411:21: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            time2 = second() - time1;
+                    ^
+linpack-pc.c:453:18: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            t1 = second();
+                 ^
+linpack-pc.c:457:17: remark: matgen inlined into main with (cost=125, threshold=250) [-Rpass=inline]
+                matgen(a,lda,n,b,&norma);
+                ^
+linpack-pc.c:467:17: remark: dgesl inlined into main with (cost=245, threshold=250) [-Rpass=inline]
+                dgesl(a,lda,n,ipvt,b,0);
+                ^
+linpack-pc.c:463:18: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            t1 = second();      
+                 ^
+linpack-pc.c:461:28: remark: second inlined into main with (cost=10, threshold=375) [-Rpass=inline]
+            atime[0][j] = (second() - t1 - tm2)/ntimes;
+                           ^

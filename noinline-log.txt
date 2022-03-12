@@ -1,0 +1,36 @@
+Dhrystone/dry.c:474:7: remark: Func1 inlined into Func2 with (cost=-20, threshold=375) [-Rpass=inline]
+                if (Func1(StrParI1[IntLoc], StrParI2[IntLoc+1]) == Ident1)
+                    ^
+Dhrystone/dry.c:405:8: remark: Func3 inlined into Proc6 with (cost=-25, threshold=375) [-Rpass=inline]
+        if (! Func3(EnumParIn) )
+              ^
+Dhrystone/dry.c:271:3: remark: Proc5 inlined into Proc0 with (cost=-20, threshold=375) [-Rpass=inline]
+                Proc5();
+                ^
+Dhrystone/dry.c:292:3: remark: Proc2 inlined into Proc0 with (cost=-5, threshold=250) [-Rpass=inline]
+                Proc2(&IntLoc1);
+                ^
+Dhrystone/dry.c:288:5: remark: Proc6 inlined into Proc0 with (cost=-40, threshold=375) [-Rpass=inline]
+                                Proc6(Ident1, &EnumLoc);
+                                ^
+Dhrystone/dry.c:287:19: remark: Func1 inlined into Proc0 with (cost=-20, threshold=375) [-Rpass=inline]
+                        if (EnumLoc == Func1(CharIndex, 'C'))
+                                       ^
+Dhrystone/dry.c:285:3: remark: Proc1 inlined into Proc0 with (cost=-15, threshold=375) [-Rpass=inline]
+                Proc1(PtrGlb);
+                ^
+Dhrystone/dry.c:284:3: remark: Proc8 inlined into Proc0 with (cost=90, threshold=250) [-Rpass=inline]
+                Proc8(Array1Glob, Array2Glob, IntLoc1, IntLoc3);
+                ^
+Dhrystone/dry.c:281:4: remark: Proc7 inlined into Proc0 with (cost=-35, threshold=375) [-Rpass=inline]
+                        Proc7(IntLoc1, IntLoc2, &IntLoc3);
+                        ^
+Dhrystone/dry.c:277:16: remark: Func2 inlined into Proc0 with (cost=55, threshold=250) [-Rpass=inline]
+                BoolGlob = ! Func2(String1Loc, String2Loc);
+                             ^
+Dhrystone/dry.c:272:3: remark: Proc4 inlined into Proc0 with (cost=-25, threshold=375) [-Rpass=inline]
+                Proc4();
+                ^
+Dhrystone/dry.c:380:2: remark: Proc7 inlined into Proc3 with (cost=-35, threshold=375) [-Rpass=inline]
+        Proc7(10, IntGlob, &PtrGlb->IntComp);
+        ^
