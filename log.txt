@@ -1,0 +1,96 @@
+McGill/chomp.c:112:12: remark: equal_data inlined into get_value with (cost=10, threshold=250) [-Rpass=inline]
+  while (! equal_data(search -> state,data)) /* until you find a match */
+           ^
+McGill/chomp.c:123:28: remark: putchar inlined into show_data with (cost=10, threshold=487) [-Rpass=inline]
+      if (counter != ncol) putchar(',');
+                           ^
+McGill/chomp.c:129:3: remark: putchar inlined into show_move with (cost=10, threshold=487) [-Rpass=inline]
+  putchar('(');
+  ^
+McGill/chomp.c:130:3: remark: show_data inlined into show_move with (cost=105, threshold=250) [-Rpass=inline]
+  show_data(data);
+  ^
+McGill/chomp.c:138:7: remark: show_move inlined into show_list with (cost=185, threshold=250) [-Rpass=inline]
+      show_move(list -> data);
+      ^
+McGill/chomp.c:148:7: remark: show_data inlined into show_play with (cost=105, threshold=250) [-Rpass=inline]
+      show_data(play -> state);
+      ^
+McGill/chomp.c:151:7: remark: show_list inlined into show_play with (cost=215, threshold=250) [-Rpass=inline]
+      show_list(play -> first);
+      ^
+McGill/chomp.c:162:11: remark: equal_data inlined into in_wanted with (cost=10, threshold=250) [-Rpass=inline]
+      if (equal_data(current -> data,data)) break; /* break if found */
+          ^
+McGill/chomp.c:196:11: remark: make_data inlined into make_list with (cost=70, threshold=250) [-Rpass=inline]
+          temp = make_data(row,col); /* create _data for this play */
+                 ^
+McGill/chomp.c:197:4: remark: melt_data inlined into make_list with (cost=15, threshold=250) [-Rpass=inline]
+          melt_data(temp,data);      /* melt it with the current one */
+          ^
+McGill/chomp.c:210:16: remark: in_wanted inlined into make_list with (cost=50, threshold=250) [-Rpass=inline]
+                  if (in_wanted(temp)) /* if in the wanted list */
+                      ^
+McGill/chomp.c:205:21: remark: get_value inlined into make_list with (cost=30, threshold=250) [-Rpass=inline]
+                  *value = get_value(temp); /* look at this value */
+                           ^
+McGill/chomp.c:201:34: remark: copy_data inlined into make_list with (cost=60, threshold=250) [-Rpass=inline]
+              current -> next -> data = copy_data(temp); /* copy data, and place in list */
+                                        ^
+McGill/chomp.c:198:10: remark: equal_data inlined into make_list with (cost=10, threshold=250) [-Rpass=inline]
+          if (! equal_data(temp,data)) /* if they are different, it good */
+                ^
+McGill/chomp.c:236:10: remark: make_data inlined into make_play with (cost=35, threshold=250) [-Rpass=inline]
+  temp = make_data(0,0); /* new data, for empty board */
+         ^
+McGill/chomp.c:238:10: remark: next_data inlined into make_play with (cost=35, threshold=250) [-Rpass=inline]
+  while (next_data(temp)) /* take next one, and break if none */
+         ^
+McGill/chomp.c:254:15: remark: make_data inlined into make_play with (cost=70, threshold=250) [-Rpass=inline]
+              temp = make_data(nrow,ncol); /* and create one that will break */
+                     ^
+McGill/chomp.c:240:11: remark: valid_data inlined into make_play with (cost=15, threshold=250) [-Rpass=inline]
+      if (valid_data(temp)) /* if board position is possible */
+          ^
+McGill/chomp.c:246:31: remark: make_list inlined into make_play with (cost=always): always inline attribute [-Rpass=inline]
+          current -> next -> first = make_list(temp,&val,&all);
+                                     ^
+McGill/chomp.c:245:31: remark: copy_data inlined into make_play with (cost=60, threshold=250) [-Rpass=inline]
+          current -> next -> state = copy_data(temp); /* make a copy of temp */
+                                     ^
+McGill/chomp.c:280:11: remark: make_data inlined into make_wanted with (cost=70, threshold=250) [-Rpass=inline]
+          temp = make_data(row,col);
+                 ^
+McGill/chomp.c:281:4: remark: melt_data inlined into make_wanted with (cost=15, threshold=250) [-Rpass=inline]
+          melt_data(temp,data);
+          ^
+McGill/chomp.c:285:34: remark: copy_data inlined into make_wanted with (cost=60, threshold=250) [-Rpass=inline]
+              current -> next -> data = copy_data(temp);
+                                        ^
+McGill/chomp.c:282:10: remark: equal_data inlined into make_wanted with (cost=10, threshold=250) [-Rpass=inline]
+          if (! equal_data(temp,data))
+                ^
+McGill/chomp.c:307:37: remark: get_value inlined into get_good_move with (cost=30, threshold=250) [-Rpass=inline]
+  while ((list -> next != NULL) && (get_value(list -> data)))
+                                    ^
+McGill/chomp.c:309:10: remark: copy_data inlined into get_good_move with (cost=60, threshold=250) [-Rpass=inline]
+  return copy_data(list -> data); /* return the value */
+         ^
+McGill/chomp.c:317:10: remark: get_good_move inlined into get_winning_move with (cost=165, threshold=250) [-Rpass=inline]
+  temp = get_good_move(play -> first); /* get good move */
+         ^
+McGill/chomp.c:323:12: remark: equal_data inlined into where with (cost=10, threshold=250) [-Rpass=inline]
+  while (! equal_data(play -> state,data)) /* search for given _data */
+           ^
+McGill/chomp.c:393:12: remark: make_data inlined into main with (cost=70, threshold=250) [-Rpass=inline]
+        current = make_data(nrow,ncol); /* start play at full board */
+                  ^
+McGill/chomp.c:396:27: remark: where inlined into main with (cost=25, threshold=250) [-Rpass=inline]
+            temp = get_good_move(where(current,tree)); /* get best move */
+                                 ^
+McGill/chomp.c:396:13: remark: get_good_move inlined into main with (cost=165, threshold=250) [-Rpass=inline]
+            temp = get_good_move(where(current,tree)); /* get best move */
+                   ^
+McGill/chomp.c:399:10: remark: get_real_move inlined into main with (cost=-25, threshold=250) [-Rpass=inline]
+                get_real_move(temp,current,&row,&col); /* calculate coordinates */
+                ^

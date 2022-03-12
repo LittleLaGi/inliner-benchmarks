@@ -1,0 +1,9 @@
+[Compilation]
+clang -O3 -Rpass=inline <source>
+
+[Switch user]
+sudo -i
+su lagi
+
+[Clear the cache + timing]
+sync && echo 3 > /proc/sys/vm/drop_caches && time /home/lagi/inliner-benchmarks/inline.out
